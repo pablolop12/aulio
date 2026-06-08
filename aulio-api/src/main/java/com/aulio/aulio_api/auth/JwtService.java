@@ -8,6 +8,7 @@ import java.util.Date;
 import javax.crypto.SecretKey;
 
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Service;
 
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.io.Decoders;
@@ -20,6 +21,7 @@ import io.jsonwebtoken.security.Keys;
  * Principalmente necesitaremos estos metodos - Generación de JWT del usuario -
  * Extraer email de un token - Validación de token no expirado
  */
+@Service
 public class JwtService {
 
 	@Value("${jwt.secret}") // importamos el valor de la clave secreta de JWT del archivo properties
