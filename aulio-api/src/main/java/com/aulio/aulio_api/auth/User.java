@@ -40,7 +40,7 @@ public class User {
 	
 	@NotNull
 	@Enumerated(EnumType.STRING) // Anotación para guardar los roles como String y no como número
-	private Roles role;
+	private Role role;
 	
 	@NotNull
 	private boolean mustChangePassword; // Booleano que identifica si es tu primera vez logeando y te obliga a cambiar la contraseña
