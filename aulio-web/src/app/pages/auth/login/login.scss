@@ -1,0 +1,295 @@
+.base {
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    padding: 35px;
+    .background {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        z-index: -1;
+
+        img {
+            position: absolute;
+            width: 300px;
+            height: auto;
+            opacity: 1;
+
+            &.orange {
+                top: 130px;
+                right: 190px;
+            }
+
+            &.yellow {
+                bottom: 130px;
+                left: 190px;
+            }
+        }
+    }
+
+    .logo {
+        position: absolute;
+        top: 30px;
+        color: rgb(0, 0, 0);
+        text-decoration: none;
+        font-weight: 400;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+
+        h1{
+            font-size: 35px;
+            font-family: "Dongle", sans-serif;
+        }
+
+        .copy {
+            font-size: 20px;
+            color: rgb(0, 0, 0);
+            position: absolute;
+            top: 2px;
+            right: -9px;
+            font-size: 12px;
+        }
+    }
+}
+
+.white-holder {
+    background-color: white;
+    width: 100%;
+    height: 100%;
+    border-radius: 40px;
+    display: flex;
+}
+
+.block-padding {
+    padding: 10px;
+}
+
+.base-block {
+
+    position: relative;
+
+
+    .login-card {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        padding: 50px;
+
+        /*
+        /.logo {
+            position: absolute;
+            top: 20px;
+            left: 0px;
+            right: 0px;
+            color: black;
+            text-decoration: none;
+            font-weight: 400;
+            font-size: 30px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+
+            i {
+                font-size: 20px;
+                color: rgb(0, 0, 0);
+        
+            }
+
+        }
+        */
+
+        .tittle {
+            margin-bottom: 40px;
+
+            h1 {
+                font-size: 50px;
+                font-weight: 500;
+                font-family: "Montserrat", sans-serif;
+            }
+
+            p {
+                font-size: 16px;
+                color: #616161;
+            }
+        }
+
+        .form-group {
+            display: flex;
+            align-items: start;
+            width: 100%;
+            flex-direction: column;
+            margin-bottom: 30px;
+
+            .password-wrapper {
+                position: relative;
+                width: 100%;
+
+                input {
+                    padding-right: 40px;
+                }
+
+                .toggle-password {
+                    position: absolute;
+                    right: 10px;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    background: none;
+                    border: none;
+                    cursor: pointer;
+                    color: #adadad;
+
+                    &:hover {
+                        color: #333;
+                    }
+                }
+            }
+
+            label {
+                font-size: 16px;
+
+            }
+
+            input {
+                padding: 12px;
+                border-radius: 15px;
+                //border: 1px solid #e6e6e6;
+                border: none;
+                width: 100%;
+                background-color: #ececec;
+            }
+
+            input::placeholder {
+                color: #969696;
+                /* Color del texto placeholder */
+                opacity: 1;
+                font-weight: 300;
+                /* Firefox establece un opacity por defecto que puede oscurecer el color */
+            }
+
+
+        }
+
+        .login-extras {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 55px;
+
+            .stay-logged {
+                display: flex;
+                align-items: center;
+                gap: 5px;
+
+                input[type="checkbox"] {
+                    appearance: none;
+                    -webkit-appearance: none;
+                    width: 15px;
+                    height: 15px;
+                    border: 1.5px solid #ccc;
+                    border-radius: 4px;
+                    cursor: pointer;
+                    position: relative;
+                    transition: background-color 0.15s, border-color 0.15s;
+
+                    &:checked {
+                        background-color: #000;
+                        border-color: #000;
+
+                        &::after {
+                            content: '';
+                            position: absolute;
+                            left: 4px;
+                            top: 1px;
+                            width: 5px;
+                            height: 9px;
+                            border: 2px solid #fff;
+                            border-top: none;
+                            border-left: none;
+                            transform: rotate(45deg);
+                        }
+                    }
+                }
+            }
+
+            a {
+                color: black;
+                text-decoration: none;
+                font-weight: 400;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+
+
+
+        .login-button {
+            padding: 15px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            border-radius: 15px;
+            border: none;
+            background-color: black;
+            color: white;
+            font-weight: 500;
+            cursor: pointer;
+            margin-bottom: 50px;
+
+            &:hover {
+                background-color: darkgreen;
+            }
+        }
+
+        .support {
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+
+            .help-button {
+                padding: 15px;
+                width: 1;
+                align-items: center;
+                display: flex;
+                justify-content: center;
+                border-radius: 15px;
+                border: none;
+                background-color: rgb(218, 218, 218);
+                color: rgb(112, 112, 112);
+                cursor: pointer;
+
+                i {
+                    color: rgb(150, 150, 150);
+                }
+
+            }
+
+
+        }
+
+        .request {
+            position: absolute;
+            bottom: 0px;
+            left: 0px;
+            right: 0px;
+            color: black;
+            text-decoration: none;
+            font-weight: 400;
+
+            &:hover {
+                text-decoration: underline;
+            }
+
+        }
+    }
+}
